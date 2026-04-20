@@ -1,0 +1,647 @@
+/* ═══════════════════════════════════════════════════
+   THE ETHEREAL ESCAPE — 'Light' Redesign
+   Minimal, Airy, Celestial
+═══════════════════════════════════════════════════ */
+
+:root {
+  --bg-color: #F8F7F4;
+  --bg-white: #FFFFFF;
+  --text-dark: #222222;
+  --text-muted: #737373;
+  --accent: #9A814C; /* Soft Olive/Gold */
+  --border-color: #E2E0D8;
+}
+
+/* Base */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Jost', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; object-fit: cover; }
+a { text-decoration: none; color: inherit; transition: color 0.3s; }
+a:hover { color: var(--accent); }
+
+/* Typography */
+h1, h2, h3, h4, .serif {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+h1 { font-size: clamp(4rem, 12vw, 10rem); letter-spacing: -0.02em; line-height: 0.9; }
+h2 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.01em; line-height: 1.1; }
+h3 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+
+.eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Header */
+.site-header {
+  position: absolute; top: 0; left: 0; width: 100%;
+  padding: 2rem 4rem; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.25rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 3rem; align-items: center; }
+.nav-links a { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; }
+.btn-nav-reserve {
+  background: var(--accent); color: white;
+  padding: 0.75rem 2rem; font-size: 0.6rem; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 500;
+}
+.btn-nav-reserve:hover { background: #826c3f; color: white; }
+
+/* Hero */
+.hero {
+  position: relative; height: 100vh; min-height: 700px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+}
+.hero-img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-position: center 30%; z-index: -2;
+  filter: brightness(1.2) contrast(0.95); /* Bright and airy */
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(to bottom, rgba(248,247,244,0) 50%, rgba(248,247,244,1) 100%);
+}
+.hero-text-wrapper {
+  transform: translateY(20px);
+  animation: fadeUp 1.2s cubic-bezier(.16,1,.3,1) forwards;
+}
+.hero h1 { margin-bottom: 0.5rem; }
+.hero-eyebrow { letter-spacing: 0.3em; margin-bottom: 2rem; }
+
+@keyframes fadeUp {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Shadows Section (Split) */
+.shadows-sect {
+  max-width: 1300px; margin: 8rem auto; padding: 0 4rem;
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem;
+  align-items: center;
+}
+.shadows-text p.eyebrow { margin-bottom: 1.5rem; }
+.shadows-text h2 { margin-bottom: 2rem; max-width: 400px; }
+.shadows-text p.body-txt { color: var(--text-muted); font-size: 1rem; line-height: 1.8; max-width: 380px; }
+
+.shadows-img-wrap { position: relative; }
+.shadows-img-wrap > img {
+  width: 100%; height: 600px;
+  filter: brightness(0.8) contrast(1.2) grayscale(0.5); /* stark architectural look */
+}
+.quote-card {
+  position: absolute; bottom: -3rem; left: -4rem;
+  background: var(--bg-white);
+  padding: 3rem 4rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  max-width: 350px;
+}
+.quote-card p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-style: italic; line-height: 1.3;
+}
+
+/* Ethereal Suites */
+.suites-sect {
+  max-width: 1400px; margin: 8rem auto; padding: 0 4rem;
+}
+.suites-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 4rem; text-align: left;
+}
+.suites-header h2 { margin-top: 0.5rem; }
+.btn-text {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color); padding-bottom: 0.2rem;
+}
+
+/* Masonry Grid Simulation */
+.suites-masonry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "wide wide"
+    "left right"
+    "wide2 wide2";
+  gap: 2rem;
+}
+
+.suite-card { background: var(--bg-white); }
+.suite-img-wrapper { position: relative; overflow: hidden; }
+.suite-img-wrapper img { width: 100%; object-fit: cover; filter: brightness(1.1) contrast(0.9); }
+.suite-card-info { padding: 2rem; display: flex; flex-direction: column; }
+
+.glass-bubble-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #111;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.glass-bubble-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Assigning grid areas for the exact layout in image 5 */
+.suite-card:nth-child(1) { grid-area: wide; }
+.suite-card:nth-child(1) .suite-img-wrapper img { height: 500px; }
+.suite-card:nth-child(2) { grid-area: right; }
+.suite-card:nth-child(2) .suite-img-wrapper img { height: 600px; }
+.suite-card:nth-child(3) { grid-area: left; }
+.suite-card:nth-child(3) .suite-img-wrapper img { height: 400px; }
+
+/* About Plaque dynamically replacing the 4th masonry slot */
+.about-plaque {
+  grid-area: wide2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-color);
+}
+.about-plaque .eyebrow { margin-bottom: 1rem; }
+
+/* Contact Section */
+.contact-sect {
+  padding: 8rem 2rem;
+  background: var(--bg-color);
+  max-width: 1300px; margin: 0 auto;
+}
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  align-items: center;
+}
+.contact-links {
+  display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;
+}
+.contact-item {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 15px;
+  background: var(--bg-white); transition: transform 0.3s, box-shadow 0.3s;
+}
+.contact-item:hover {
+  transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.contact-icon { font-size: 2rem; color: var(--accent); }
+.contact-label {
+  font-family: 'Jost', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.2rem;
+}
+.contact-text {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--text-dark); line-height: 1;
+}
+.contact-map {
+  width: 100%; height: 500px; border-radius: 15px; overflow: hidden;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border-color);
+}
+.footer-logo { font-family: 'Cormorant Garamond', serif; letter-spacing: 0.2em; margin-bottom: 2rem; }
+.footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+.footer-links a { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+.footer-copy { font-size: 0.55rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; }
+
+/* Mobile Collage Specifics */
+.mobile-collage { display: none; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .shadows-sect { grid-template-columns: 1fr; gap: 4rem; }
+  .quote-card { bottom: -2rem; left: 0; padding: 2rem; }
+  .suites-masonry { display: flex; flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+  .site-header { padding: 1.5rem 2rem; }
+  .nav-links, .btn-nav-reserve { display: none; } /* Hide top nav on mobile */
+  
+  .contact-sect { padding: 4rem 1.5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-map { height: 350px; }
+  
+  .desktop-only { display: none !important; }
+  
+  /* Mobile Hero specific padding so title overlays the image properly */
+  .hero-img { height: 110vh; object-position: right; filter: brightness(1.05); }
+  .hero { align-items: flex-start; text-align: left; padding: 0 2rem; justify-content: flex-end; padding-bottom: 10vh;}
+  .hero-overlay { background: linear-gradient(to top, rgba(248,247,244,1) 0%, transparent 60%); }
+  
+  .mobile-btn { background: var(--accent); color: white; display: inline-block; padding: 1rem 3rem; margin-top: 2rem; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;}
+
+  /* Mobile Collage Section */
+  .mobile-collage {
+    display: block; padding: 4rem 2rem;
+  }
+  .m-collage-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem;
+  }
+  .m-collage-wide { grid-column: 1 / -1; margin-bottom: 2rem; }
+  .m-collage-wide img { width: 100%; height: 350px; object-fit: cover; }
+  .m-card-light { background: var(--bg-color); padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+  .m-card-light i { color: var(--accent); font-size: 1.2rem; margin-bottom: 1rem; }
+  .m-collage-img img { width: 100%; height: 150px; object-fit: cover; }
+
+  /* Mobile Bento Box Tweaks */
+  .bento-wrapper { padding: 0 1rem; margin-top: 1rem; }
+  .bento-header { display: flex !important; margin-bottom: 1.5rem; justify-content: center; padding: 1rem; } /* Show header to keep the Logo, center it */
+  .bento-nav { display: none !important; } /* Hide the navbar links */
+  .bento-title-row { display: none !important; } /* Hide the headline and Learn More button */
+  .bento-image-container { height: 400px; }
+  .bento-glass-bar { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1rem; bottom: 1rem; left: 1rem; right: 1rem;}
+  .bento-glass-title { font-size: 1rem; }
+  .bento-cards-row { flex-direction: column; gap: 1rem; }
+  .bento-card { padding: 1.5rem; }
+  .desktop-only-title { font-size: 1.5rem; }
+}
+
+/* =========================================================================
+   CINEMATIC SCROLL REVEAL ENGINE
+========================================================================= */
+
+/* Base transition states */
+.reveal-up, .reveal-blur, .reveal-scale {
+  opacity: 0;
+  will-change: transform, opacity, filter;
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reveal Up Physics: starts down */
+.reveal-up {
+  transform: translateY(40px);
+}
+
+/* Reveal Blur Physics: starts heavily blurred */
+.reveal-blur {
+  filter: blur(15px);
+  transform: scale(1.02);
+}
+
+/* Reveal Scale Physics: breathes inward */
+.reveal-scale {
+  transform: scale(1.08);
+}
+
+/* The Active State triggered by IntersectionObserver */
+.reveal-up.active, 
+.reveal-blur.active, 
+.reveal-scale.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* =========================================================================
+   GLOBAL GLASS MODAL
+========================================================================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Hidden state */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.modal-overlay.modal-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.glass-modal-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  
+  /* Animation physics */
+  transform: translateY(50px) scale(0.95);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.modal-show .glass-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  background: none; border: none; font-size: 1.5rem; color: #111; cursor: pointer;
+  transition: transform 0.2s;
+}
+.modal-close-btn:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+
+.modal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.modal-body {
+  font-family: 'Jost', sans-serif;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-height: 50vh;
+  overflow-y: auto;
+  text-align: left;
+  /* Scrollbar styling */
+  scrollbar-width: thin;
+}
+
+/* Discover More Trigger Button */
+.btn-discover {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  padding: 0.6rem 1.5rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.btn-discover:hover {
+  background: var(--text-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================================
+   SPLASH SCREEN (NEW LANDING)
+========================================================================= */
+
+.splash-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.splash-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.splash-footer {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: slideUp 1s ease-out 1s forwards;
+}
+
+.splash-location {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.splash-arrow {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  animation: bounceDown 2s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; filter: blur(10px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+@keyframes bounceDown {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* =========================================================================
+   BENTO HERO SECTION STYLES (NEW)
+========================================================================= */
+
+.bento-wrapper {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font-family: 'Jost', sans-serif;
+}
+
+.bento-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  background-color: rgba(248, 247, 244, 0.95);
+  backdrop-filter: blur(10px);
+  
+  display: flex; justify-content: space-between; align-items: center;
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+.bento-logo {
+  font-weight: 500; letter-spacing: -0.02em; font-size: 1rem; color: #111; font-family: 'Jost', sans-serif; font-style: normal;
+}
+
+.bento-nav {
+  display: flex; gap: 2.5rem;
+}
+.bento-nav a { 
+  font-size: 0.75rem; text-transform: none; letter-spacing: 0; color: #222;
+}
+
+.bento-title-row {
+  display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;
+  opacity: 0; transform: translateY(20px);
+  animation: slideUp 0.8s ease-out 0.2s forwards;
+}
+
+.bento-headline {
+  font-family: 'Jost', sans-serif;
+  font-size: 4.5rem;
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.bento-btn-primary {
+  background: #111; color: white; border-radius: 10px;
+  padding: 0.8rem 1.8rem; font-size: 0.8rem; font-weight: 500;
+  transition: opacity 0.3s;
+}
+.bento-btn-primary:hover { opacity: 0.8; }
+
+.bento-image-container {
+  position: relative; width: 100%; height: 500px;
+  border-radius: 20px; overflow: hidden;
+  margin-bottom: 1.5rem;
+  opacity: 0; transform: scale(0.98);
+  animation: scaleIn 0.8s ease-out 0.4s forwards;
+}
+
+.bento-hero-img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+.bento-glass-bar {
+  position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;
+  background: rgba(25,25,25,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 15px; padding: 1.5rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  color: white; border: 1px solid rgba(255,255,255,0.1);
+}
+
+.bento-badge {
+  background: white; color: #111; font-weight: 600; font-size: 0.5rem;
+  padding: 0.2rem 0.6rem; border-radius: 20px; letter-spacing: 0.1em;
+  margin-bottom: 0.5rem; display: inline-block;
+}
+
+.bento-glass-title {
+  font-size: 1.25rem; font-weight: 500; margin-bottom: 0.3rem;
+}
+
+.bento-glass-sub {
+  font-size: 0.75rem; color: rgba(255,255,255,0.7);
+}
+
+.bento-arrow-btn {
+  background: white; color: #111;
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: none; cursor: pointer; font-size: 1.2rem;
+}
+
+.bento-cards-row {
+  display: flex; gap: 1.5rem;
+}
+
+.bento-card {
+  flex: 1; background: #EFEBE4; border-radius: 15px; padding: 1.5rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  opacity: 0; transform: translateY(20px);
+}
+.bento-card:nth-child(1) { animation: slideUp 0.6s ease-out 0.6s forwards; }
+.bento-card:nth-child(2) { animation: slideUp 0.6s ease-out 0.7s forwards; }
+.bento-card:nth-child(3) { animation: slideUp 0.6s ease-out 0.8s forwards; }
+
+.bento-card-dark { background: #EBEBEB; }
+.bento-card-black { background: #18181A; color: white; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;}
+
+.bento-card-title {
+  font-size: 2rem; font-weight: 500; line-height: 1;
+}
+
+.desktop-only-title {
+  font-size: 2rem;
+}
+
+.bento-badge-outline {
+  border: 1px solid #aaa; color: #555; padding: 0.3rem 0.8rem;
+  border-radius: 20px; font-size: 0.5rem; font-weight: 600; letter-spacing: 0.1em;
+}
+
+/* Landing Animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}

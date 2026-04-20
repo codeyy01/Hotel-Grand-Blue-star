@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "HGBstar",
+			"path": "."
+		},
+		{
+			"name": "GBH",
+			"path": "../OneDrive/Pictures/GBH"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HGBstar"
+	}
+}

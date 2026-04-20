@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ethereal Escape | Mobile App View</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons for Mobile Bottom Nav -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SPLASH SCREEN LANDING -->
+  <section class="splash-screen" id="landing">
+    <h1 class="splash-title">GRAND BLUE STAR</h1>
+    
+    <div class="splash-footer">
+      <span class="splash-location">MANGALURU COAST</span>
+      <i class="ph ph-arrow-down splash-arrow"></i>
+    </div>
+  </section>
+
+  <!-- STICKY DESKTOP NAVBAR -->
+  <header class="bento-header" id="nav">
+    <div class="bento-logo">GRAND BLUE STAR</div>
+    <nav class="bento-nav">
+      <a href="#home">Home</a>
+      <a href="#rituals">Services</a>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#contacts">Contacts</a>
+    </nav>
+  </header>
+
+  <!-- BENTO HERO SECTION -->
+  <div class="bento-wrapper" id="home">
+
+    <div class="bento-title-row">
+      <h1 class="bento-headline">ELEVATED COASTAL<br>LUXURY</h1>
+      <a href="#reserve" class="bento-btn-primary">Learn More</a>
+    </div>
+
+    <div class="bento-image-container">
+      <img src="images/Hotel_Grand_Blue_Star.jpg" alt="Grand Blue Star Architecture" class="bento-hero-img">
+      <div class="bento-glass-bar">
+        <div>
+          <span class="bento-badge">NEWS</span>
+          <p class="bento-glass-title">Experience Mangaluru's Finest</p>
+          <p class="bento-glass-sub">Our services: Coastal living, infinite pools, world-class dining, and elite spa.</p>
+        </div>
+        <button class="bento-arrow-btn"><i class="ph ph-arrow-up-right"></i></button>
+      </div>
+    </div>
+
+    <div class="bento-cards-row">
+      <a href="tel:+917338309555" class="bento-card bento-card-dark" style="text-decoration: none; color: inherit;">
+        <div>
+          <p class="bento-card-title desktop-only-title">Reserve Now</p>
+        </div>
+        <button class="bento-arrow-btn" style="pointer-events: none;"><i class="ph ph-arrow-up-right"></i></button>
+      </a>
+      
+      <a href="#rooms" class="bento-card" style="text-decoration: none; color: inherit;">
+        <div>
+          <p class="bento-card-title" style="color: #2A2A2A;">Rooms</p>
+        </div>
+        <span class="bento-badge-outline">EXPLORE</span>
+      </a>
+      
+      <a href="https://maps.google.com/?q=Hotel+Grand+Blue+Star+Mangaluru" target="_blank" class="bento-card bento-card-black" style="min-width: 30%; text-decoration: none; color: white;">
+        <p class="bento-card-title">Location</p>
+        <p class="bento-card-sub" style="color: #bbb;">Mangaluru Coast</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- END BENTO HERO SECTION -->
+
+  <!-- DESKTOP SECTIONS (Hidden loosely or restacked on mobile) -->
+  
+  <!-- SHADOWS & SILENCE -->
+  <section class="shadows-sect" id="rituals">
+    <div class="shadows-text reveal-up">
+      <p class="eyebrow">CURATED FORM</p>
+      <h2>Where shadows define the silence.</h2>
+      <p class="body-txt">Designed by Pritzker laureates, every corridor is an intentional dialogue between raw travertine and the shifting zenith. We do not just offer stay; we offer a lens into the ethereal.</p>
+      <button class="btn-discover" data-modal-title="Ethereal Services" data-modal-content="<ul style='list-style-type: none; padding: 0;'>
+        <li style='margin-bottom:1rem;'><b>The Bath Ritual</b><br>A fully immersive water therapy session blending ancient ayurvedic traditions with modern minimalist pools.</li>
+        <li style='margin-bottom:1rem;'><b>Curated Dining</b><br>Our Michelin-starred head chef crafts hyper-local, seasonal tasting menus focused purely on coastal ingredients.</li>
+        <li style='margin-bottom:1rem;'><b>Quiet Study</b><br>A private library featuring thousands of art & architecture prints available for all guests 24/7.</li>
+      </ul>">+ Discover More</button>
+    </div>
+    <div class="shadows-img-wrap reveal-scale">
+      <!-- Dark contrast architectural shot -->
+      <img src="images/photo_2026-04-14_21-42-31.jpg" alt="Dark Architecture">
+      <div class="quote-card">
+        <p>"Light is the only true luxury."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETHEREAL SUITES (Masonry Grid) -->
+  <section class="suites-sect" id="rooms">
+    <div class="suites-header reveal-up">
+      <div>
+        <p class="eyebrow">THE SANCTUARY</p>
+        <h2>Ethereal Suites.</h2>
+      </div>
+      <a href="#all" class="btn-text">VIEW ALL COLLECTIONS</a>
+    </div>
+
+    <div class="suites-masonry">
+      <!-- Wide top -->
+      <div class="suite-card reveal-up">
+        <div class="suite-img-wrapper">
+          <img src="images/photo_2026-04-14_21-41-41.jpg" alt="Family Room">
+          <a href="tel:+917338309555" class="glass-bubble-btn">Book Now <i class="ph ph-arrow-up-right"></i></a>
+        </div>
+        <div class="suite-card-info">
+          <h3>Family Room</h3>
+          <p class="eyebrow">SPACIOUS LIVING + SCENIC BALCONY</p>
+          <button class="btn-discover" data-modal-title="Family Room Details" data-modal-content="Perfect for longer stays. This massive architectural space includes a completely separated sleeping area, a central living pavilion, and an expansive ocean-facing deck. <br><br><b>Amenities:</b> King & Queen Beds, 2 Floating Tubs, Double Vanities, Private plunge pool, 24/7 Butler Service.">+ Discover More</button>
+        </div>
+      </div>
+      
+      <!-- Portrait Right -->
+      <div class="suite-card reveal-up delay-100">
+        <div class="suite-img-wrapper">
+          <img src="images/photo_2026-04-14_21-43-16.jpg" alt="Double Room">
+          <a href="tel:+917338309555" class="glass-bubble-btn">Book Now <i class="ph ph-arrow-up-right"></i></a>
+        </div>
+        <div class="suite-card-info">
+          <h3>Double Room</h3>
+          <p class="eyebrow">OCEAN FACING + EXTRA SPACE</p>
+          <button class="btn-discover" data-modal-title="Double Room Details" data-modal-content="Designed specifically for couples and companions. The Double Room frames the ocean perfectly between monolithic travertine walls. <br><br><b>Amenities:</b> 2 Queen Beds or 1 King, Walk-in rain shower, Automated blackout shades, Minibar stocked with local delicacies.">+ Discover More</button>
+        </div>
+      </div>
+      
+      <!-- Square/Standard Left -->
+      <div class="suite-card reveal-up delay-200">
+        <div class="suite-img-wrapper">
+          <img src="images/photo_2026-04-14_21-41-52.jpg" alt="Single Room">
+          <a href="tel:+917338309555" class="glass-bubble-btn">Book Now <i class="ph ph-arrow-up-right"></i></a>
+        </div>
+        <div class="suite-card-info">
+          <h3>Single Room</h3>
+          <p class="eyebrow">COZY + PREMIUM AMENITIES</p>
+          <button class="btn-discover" data-modal-title="Single Room Details" data-modal-content="A highly curated, peaceful space for the solo traveler to decompress completely. <br><br><b>Amenities:</b> 1 Premium King Bed, Reading nook, Direct garden access, High-speed Wi-Fi, Japanese soaking tub.">+ Discover More</button>
+        </div>
+      </div>
+
+      <!-- Wide bottom: About Section -->
+      <div class="suite-card about-plaque reveal-blur delay-300" id="about">
+        <div class="about-plaque-content">
+          <p class="eyebrow">THE VISION</p>
+          <h3 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem;">An architecture of pure repose.</h3>
+          <p class="body-txt" style="max-width: 650px; margin: 0 auto; color: var(--text-muted);">Since its inception, Hotel Grand Blue Star has stood as a vanguard of coastal elegance in Mangaluru. Fusing minimalist design with world-class hospitality, absolute serenity becomes our greatest amenity.</p>
+          <div style="margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center; align-items: center;">
+            <a href="#contacts" class="bento-btn-primary">Contact Us</a>
+            <button class="bento-btn-primary" style="border:none; cursor:pointer;" data-modal-title="Our Architecture" data-modal-content="<p>The hotel was constructed using locally sourced laterite stone and polished travertine, creating an organic thermal mass that keeps the interiors cool throughout the intense summer. </p><br><p>Our Pritzker-winning architect designed the hotel around the concept of 'Shadow Play' — utilizing long, thin windows to catch the sweeping sunset across the bay, projecting natural art across the walls all day.</p>">+ Discover More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-sect" id="contacts">
+    <div class="contact-grid">
+      <div class="contact-info reveal-up">
+        <p class="eyebrow">REACH OUT</p>
+        <h2 style="margin-bottom: 1rem;">Connect With Us.</h2>
+        <p class="body-txt" style="color: var(--text-muted); margin-bottom: 2rem;">For reservations, private viewing requests, or any inquiries regarding your stay at The Grand Blue Star.</p>
+        
+        <div class="contact-links reveal-up delay-100">
+          <a href="tel:08244110363" class="contact-item">
+            <i class="ph ph-phone contact-icon"></i>
+            <div>
+              <span class="contact-label">LANDLINE</span>
+              <p class="contact-text">08244110363</p>
+            </div>
+          </a>
+          <a href="tel:+917338309555" class="contact-item">
+            <i class="ph ph-device-mobile contact-icon"></i>
+            <div>
+              <span class="contact-label">MOBILE</span>
+              <p class="contact-text">+91 73383 09555</p>
+            </div>
+          </a>
+          <a href="https://wa.me/917338309555" target="_blank" class="contact-item">
+            <i class="ph ph-whatsapp-logo contact-icon"></i>
+            <div>
+              <span class="contact-label">WHATSAPP</span>
+              <p class="contact-text">Message Us</p>
+            </div>
+          </a>
+          <a href="mailto:reservations@grandbluestar.com" class="contact-item">
+            <i class="ph ph-envelope-simple contact-icon"></i>
+            <div>
+              <span class="contact-label">EMAIL</span>
+              <p class="contact-text">reservations@grandbluestar.com</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-map reveal-blur delay-300">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4841.753396598341!2d74.8436405750746!3d12.868484687437522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b990c9e2a49%3A0x99ffa05e10da80b7!2sHOTEL%20GRAND%20BLUE%20STAR%20MANGALORE!5e1!3m2!1sen!2sin!4v1776251710278!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE/GLOBAL FOOTER -->
+  <footer class="site-footer" style="padding-top: 6rem;">
+    <div class="footer-logo">THE ETHEREAL ESCAPE</div>
+    <div class="footer-links">
+      <a href="#home">HOME</a>
+      <a href="#rituals">SERVICES</a>
+      <a href="#about">ABOUT</a>
+      <a href="#rooms">ROOMS</a>
+      <a href="#contacts">CONTACTS</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 THE ETHEREAL ESCAPE. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <style>
+    @media (max-width: 768px) {
+      .desktop-only { display: none !important; }
+      .mobile-only { display: block !important; }
+    }
+    @media (min-width: 769px) {
+      .mobile-only { display: none !important; }
+    }
+  </style>
+
+  <!-- GLOBAL GLASS MODAL -->
+  <div class="modal-overlay" id="global-modal">
+    <div class="glass-modal-card">
+      <button class="modal-close-btn" id="modal-close"><i class="ph ph-x"></i></button>
+      <h3 class="modal-title" id="modal-title-display">Content Title</h3>
+      <div class="modal-body" id="modal-body-display">
+        Content goes here.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cinematic Intersection Observer Engine
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -10% 0px', // Triggers slightly before element appears fully
+        threshold: 0.1
+      };
+
+      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Unobserve after triggering to prevent re-animation
+          }
+        });
+      }, observerOptions);
+
+      // Target all elements mapped with our cinematic reveal utility classes
+      const revealElements = document.querySelectorAll('.reveal-up, .reveal-blur, .reveal-scale');
+      revealElements.forEach(el => scrollObserver.observe(el));
+
+      // Modal Engine
+      const modal = document.getElementById('global-modal');
+      const closeBtn = document.getElementById('modal-close');
+      const titleDisplay = document.getElementById('modal-title-display');
+      const bodyDisplay = document.getElementById('modal-body-display');
+      const discoverBtns = document.querySelectorAll('.btn-discover, .bento-btn-primary[data-modal-title]');
+
+      discoverBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const title = btn.getAttribute('data-modal-title');
+          const content = btn.getAttribute('data-modal-content');
+          
+          titleDisplay.textContent = title;
+          bodyDisplay.innerHTML = content; // Allows parsing HTML inside data attributes (like <br> or <ul>)
+          
+          modal.classList.add('modal-show');
+        });
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('modal-show');
+      });
+
+      // Close modal on background overlay click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('modal-show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
