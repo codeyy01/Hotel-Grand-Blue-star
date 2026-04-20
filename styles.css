@@ -222,7 +222,7 @@ h3 { font-size: 1.6rem; margin-bottom: 0.25rem; }
   font-family: 'Jost', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.2rem;
 }
 .contact-text {
-  font-family: 'Jost', sans-serif; font-size: clamp(0.85rem, 4.5vw, 1.25rem); font-weight: 400; color: var(--text-dark); line-height: 1.3; letter-spacing: 0.03em; word-break: break-word;
+  font-family: 'Jost', sans-serif; font-size: 1.25rem; font-weight: 400; color: var(--text-dark); line-height: 1.3; letter-spacing: 0.03em;
 }
 .contact-map {
   width: 100%; height: 500px; border-radius: 15px; overflow: hidden;
@@ -254,6 +254,8 @@ h3 { font-size: 1.6rem; margin-bottom: 0.25rem; }
   .contact-sect { padding: 4rem 1.5rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .contact-map { height: 350px; }
+  .contact-item { padding: 1rem; gap: 0.8rem; }
+  .contact-text { font-size: clamp(0.6rem, 3.2vw, 1rem); white-space: nowrap; }
   
   .desktop-only { display: none !important; }
   
